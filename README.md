@@ -1,7 +1,7 @@
 TODO
 
 - [x] Set up the project
-- [ ] Main components and workflow
+- [x] Main components and workflow
 - [ ] Fetch API
 - [ ] Filters and controll them (State)
 - [ ] Add detail pages
