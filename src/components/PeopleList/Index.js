@@ -4,15 +4,11 @@ import PropTypes from 'prop-types';
 
 import Card from '../Card/Index';
 
-const PeopleList = (props) => {
+const PeopleList = props => {
 	return (
 		<section className="people-list">
 			<h2>Lista de people</h2>
-			<ul>
-
-				/////////
-				{props.people.}
-			</ul>
+			<ul>{/* {props.people.} */}</ul>
 		</section>
 	);
 };
