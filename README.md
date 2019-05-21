@@ -1,3 +1,12 @@
+TODO
+
+- [x] Set up the project
+- [ ] Main components and workflow
+- [ ] Fetch API
+- [ ] Filters and controll them (State)
+- [ ] Add detail pages
+- [ ] Review code and clean
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
