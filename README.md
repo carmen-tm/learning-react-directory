@@ -2,7 +2,8 @@ TODO
 
 - [x] Set up the project
 - [x] Main components and workflow
-- [ ] Fetch API
+- [x] Fetch API and get data
+- [x] Render li items from API
 - [ ] Filters and controll them (State)
 - [ ] Add detail pages
 - [ ] Review code and clean
