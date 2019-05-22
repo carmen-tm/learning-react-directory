@@ -21,7 +21,16 @@ class App extends React.Component {
 		fetchPeople().then(data => {
 			this.setState({
 				people: {
-					dataArr: data.results,
+					// dataArr: data.results,
+
+					//Gonna add a new key on the object with the full name, and another one for the id, as it has not
+					dataArr: data.results.map((item, index) => {
+						return {
+							...item,
+							id: `person-${index}`,
+							fullName: `${item.name.first} ${item.name.last}`
+						};
+					}),
 					//isFetching is for the Loading
 					isFetching: false
 				}
