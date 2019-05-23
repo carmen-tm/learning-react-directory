@@ -4,7 +4,8 @@ TODO
 - [x] Main components and workflow
 - [x] Fetch API and get data
 - [x] Render li items from API
-- [ ] Filters and controll them (State)
+- [x] Filters as controlled inputs (from State)
+- [x] Render li items filtered
 - [ ] Add detail pages
 - [ ] Review code and clean
 
