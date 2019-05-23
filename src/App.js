@@ -143,15 +143,25 @@ class App extends React.Component {
 						{/* Want to pass the array the people already filtered! */}
 						{/* <PeopleList people={dataArr} /> */}
 						<PeopleList
-							people={dataArr.filter(person => {
-								if (gendersSelected.length === 0) {
-									//no filter, show EVERYTHING (all true)
-									return true;
-								} else {
-									//Retorna true si el género del item está incluido en el array de selección
-									return gendersSelected.includes(person.gender);
-								}
-							})}
+							people={dataArr
+								.filter(person => {
+									if (gendersSelected.length === 0) {
+										//no filter, show EVERYTHING (all true)
+										return true;
+									} else {
+										//Retorna true si el género del item está incluido en el array de selección
+										return gendersSelected.includes(person.gender);
+									}
+								})
+								.filter(person => {
+									if (citiesSelected.length === 0) {
+										//no filter, show EVERYTHING (all true)
+										return true;
+									} else {
+										//Retorna true si el género del item está incluido en el array de selección
+										return citiesSelected.includes(person.location.city);
+									}
+								})}
 						/>
 					</main>
 				)}
