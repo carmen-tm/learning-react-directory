@@ -113,6 +113,7 @@ class App extends React.Component {
 
 	render() {
 		const { dataArr, isFetching } = this.state.people;
+		console.log('dataArr', dataArr);
 		const {
 			allGenders,
 			allCities,
@@ -139,7 +140,19 @@ class App extends React.Component {
 							stateFilterGenders={gendersSelected}
 							stateFilterCities={citiesSelected}
 						/>
-						<PeopleList people={dataArr} />
+						{/* Want to pass the array the people already filtered! */}
+						{/* <PeopleList people={dataArr} /> */}
+						<PeopleList
+							people={dataArr.filter(person => {
+								if (gendersSelected.length === 0) {
+									//no filter, show EVERYTHING (all true)
+									return true;
+								} else {
+									//Retorna true si el género del item está incluido en el array de selección
+									return gendersSelected.includes(person.gender);
+								}
+							})}
+						/>
 					</main>
 				)}
 			</div>
