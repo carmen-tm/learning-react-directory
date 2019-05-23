@@ -155,7 +155,8 @@ class App extends React.Component {
 								// })
 								.filter(person => {
 									return (
-										gendersSelected.length === 0 ||
+										//Length of array ===0 equals !length
+										!gendersSelected.length ||
 										gendersSelected.includes(person.gender)
 									);
 								})
