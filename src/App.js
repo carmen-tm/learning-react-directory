@@ -144,14 +144,20 @@ class App extends React.Component {
 						{/* <PeopleList people={dataArr} /> */}
 						<PeopleList
 							people={dataArr
+								// .filter(person => {
+								// 	if (gendersSelected.length === 0) {
+								// 		//no filter, show EVERYTHING (all true)
+								// 		return true;
+								// 	} else {
+								// 		//Retorna true si el género del item está incluido en el array de selección
+								// 		return gendersSelected.includes(person.gender);
+								// 	}
+								// })
 								.filter(person => {
-									if (gendersSelected.length === 0) {
-										//no filter, show EVERYTHING (all true)
-										return true;
-									} else {
-										//Retorna true si el género del item está incluido en el array de selección
-										return gendersSelected.includes(person.gender);
-									}
+									return (
+										gendersSelected.length === 0 ||
+										gendersSelected.includes(person.gender)
+									);
 								})
 								.filter(person => {
 									if (citiesSelected.length === 0) {
