@@ -75,7 +75,7 @@ const FilterList = props => {
 									id={city}
 									value={city}
 									onChange={onCityChange}
-									checked={stateFilterCities.includes({ city })}
+									checked={stateFilterCities.includes(city)}
 								/>
 							</div>
 						);
