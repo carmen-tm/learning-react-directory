@@ -123,7 +123,7 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<header>
-					<h1>People Directory</h1>
+					<h1 className="App-title">People Directory</h1>
 				</header>
 				{isFetching ? (
 					//If is true, is fetcthing, the loading appear
@@ -131,7 +131,7 @@ class App extends React.Component {
 						<p>Loading...</p>
 					</main>
 				) : (
-					<main>
+					<main className="App-main">
 						<FilterList
 							onGenderChange={this.handleGenderFilter}
 							onCityChange={this.handleCityFilter}

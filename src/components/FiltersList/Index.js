@@ -14,7 +14,7 @@ const FilterList = props => {
 		stateFilterCities
 	} = props;
 	return (
-		<section className="filters-list">
+		<aside className="filters-list">
 			<h2>Lista de filtros</h2>
 			<form>
 				<fieldset>
@@ -82,7 +82,7 @@ const FilterList = props => {
 					})}
 				</fieldset>
 			</form>
-		</section>
+		</aside>
 	);
 };
 
