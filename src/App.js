@@ -1,8 +1,9 @@
 import React from 'react';
-import './App.scss';
 import fetchPeople from './services/people-service';
 import FilterList from './components/FiltersList/Index';
 import PeopleList from './components/PeopleList/Index';
+import './App.scss';
+import { Route, Switch, Link } from 'react-router-dom';
 
 class App extends React.Component {
 	constructor(props) {
@@ -68,6 +69,10 @@ class App extends React.Component {
 				};
 			});
 		});
+	}
+
+	componentDidMount() {
+		this.getPeople();
 	}
 
 	handleGenderFilter(event) {
@@ -174,10 +179,6 @@ class App extends React.Component {
 				)}
 			</div>
 		);
-	}
-
-	componentDidMount() {
-		this.getPeople();
 	}
 }
 
