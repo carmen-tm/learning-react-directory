@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Styles.scss';
+import InputCheckbox from '../InputCheckbox';
 
 //simple functional component: sfc
 const FilterList = props => {
-	console.log(props);
 	const {
 		onGenderChange,
 		onCityChange,
@@ -19,65 +19,28 @@ const FilterList = props => {
 			<form>
 				<fieldset>
 					<legend>Genders</legend>
-					{/* <Input
-                            name="female"
-                            onChange={handleOnClick}
-                            checked={true}
-                        /> */}
-					<div>
-						<label htmlFor="female">Female</label>
-						<input
-							type="checkbox"
-							//
-							name="genders"
-							id="female"
-							value="female"
-							onChange={onGenderChange}
-							//We want the checkbox to be controlled component. On inputs texts, that is the value. Here, is if it is checked or not
-							checked={stateFilterGenders.includes('female')}
-						/>
-					</div>
 
-					<div>
-						<label htmlFor="male">Male</label>
-						<input
-							type="checkbox"
-							name="genders"
-							id="male"
-							value="male"
-							onChange={onGenderChange}
-							checked={stateFilterGenders.includes('male')}
-						/>
-					</div>
-
-					<div>
-						<label htmlFor="other">Other</label>
-						<input
-							type="checkbox"
-							name="genders"
-							id="other"
-							value="other"
-							onChange={onGenderChange}
-							checked={stateFilterGenders.includes('other')}
-						/>
-					</div>
+					{stateAllGenders.map((gender, index) => {
+						return (
+							<InputCheckbox
+								key={index}
+								onGenderChange={onGenderChange}
+								gender={gender}
+								stateFilterGenders={stateFilterGenders}
+							/>
+						);
+					})}
 				</fieldset>
-
 				<fieldset>
 					<legend>Cities</legend>
 					{stateAllCities.map((city, index) => {
 						return (
-							<div key={index}>
-								<label htmlFor={city}>{city}</label>
-								<input
-									type="checkbox"
-									name="cities"
-									id={city}
-									value={city}
-									onChange={onCityChange}
-									checked={stateFilterCities.includes(city)}
-								/>
-							</div>
+							<InputCheckbox
+								key={index}
+								onGenderChange={onCityChange}
+								gender={city}
+								stateFilterGenders={stateFilterCities}
+							/>
 						);
 					})}
 				</fieldset>
