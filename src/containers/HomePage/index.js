@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FilterList from '../../components/FiltersList';
 import PeopleList from '../../components/PeopleList';
 import './styles.scss';
@@ -21,6 +22,7 @@ class Home extends React.Component {
 			<div className="App">
 				<header>
 					<h1 className="App-title">People Directory</h1>
+					<Link to="/user">Link a UserDetailPage</Link>
 				</header>
 				{isFetching ? (
 					//If is true, is fetcthing, the loading appear

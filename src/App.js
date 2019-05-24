@@ -1,8 +1,9 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import fetchPeople from './services/people-service';
 
-import Home from './containers/Home';
+import HomePage from './containers/HomePage';
+import UserDetailPage from './containers/UserDetailPage';
 import './App.scss';
 
 class App extends React.Component {
@@ -132,7 +133,7 @@ class App extends React.Component {
 					path="/"
 					render={() => {
 						return (
-							<Home
+							<HomePage
 								dataArr={dataArr}
 								isFetching={isFetching}
 								allGenders={allGenders}
@@ -144,6 +145,13 @@ class App extends React.Component {
 							/>
 						);
 					}}
+				/>
+				<Route
+					//To be a dinamic link we need to pass as props the ruterProps key match, that has all info I need
+					path="/user/:userId"
+					render={routerProps => (
+						<UserDetailPage match={routerProps.match} dataArr={dataArr} />
+					)}
 				/>
 			</Switch>
 		);

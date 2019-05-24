@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
 import './styles.scss';
 
 const Card = props => {
-	const { fullName, img, city, age } = props;
+	const { id, fullName, img, city, age } = props;
 	return (
 		//Each card could be an article
 		<article className="card">
@@ -11,12 +13,14 @@ const Card = props => {
 			<img src={img} alt={fullName} />
 			<p>{city}</p>
 			<p>{age}</p>
+			<Link to={`/user/${id}`}> Más info </Link>
 		</article>
 	);
 };
 
 //It arrives an object with different keys, with everything strings
 Card.propTypes = {
+	id: PropTypes.string.isRequired,
 	fullName: PropTypes.string.isRequired,
 	img: PropTypes.string.isRequired,
 	city: PropTypes.string.isRequired,

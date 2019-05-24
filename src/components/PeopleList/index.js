@@ -14,6 +14,7 @@ const PeopleList = props => {
 						//Li items have a key with the id that I have created before as a new key in the setState function
 						<li key={person.id}>
 							<Card
+								id={person.id}
 								fullName={person.fullName}
 								img={person.picture.medium}
 								city={person.location.city}
