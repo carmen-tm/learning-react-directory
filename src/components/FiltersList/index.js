@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Styles.scss';
 import InputCheckbox from '../InputCheckbox';
+import './styles.scss';
 
 //simple functional component: sfc
 const FilterList = props => {

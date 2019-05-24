@@ -1,8 +1,8 @@
 import React from 'react';
-import './Styles.scss';
 import PropTypes from 'prop-types';
+import Card from '../Card';
 
-import Card from '../Card/Index';
+import './styles.scss';
 
 const PeopleList = props => {
 	return (

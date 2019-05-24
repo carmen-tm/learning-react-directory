@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Styles.scss';
+import './styles.scss';
 
 const Card = props => {
 	const { fullName, img, city, age } = props;
