@@ -24,7 +24,7 @@ class Home extends React.Component {
 		};
 
 		//Bind all my methods
-		this.handleGenderFilter = this.handleGenderFilter.bind(this);
+		this.handleGenderFilter = this.handleGenderFigitlter.bind(this);
 		this.handleCityFilter = this.handleCityFilter.bind(this);
 	}
 
