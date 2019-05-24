@@ -5,11 +5,12 @@ import Card from '../Card';
 import './styles.scss';
 
 const PeopleList = props => {
+	const { people } = props;
 	return (
 		<section className="people-list">
 			<h2>Lista de people</h2>
 			<ul>
-				{props.people.map(person => {
+				{people.map(person => {
 					return (
 						//Li items have a key with the id that I have created before as a new key in the setState function
 						<li key={person.id}>

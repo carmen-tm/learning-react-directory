@@ -42,7 +42,9 @@ class App extends React.Component {
 						dataArr: data.results.map((item, index) => {
 							return {
 								...item,
-								id: `person-${index}`,
+								//Avoid user-0, better to start in 1
+								// id: `user-${index}` + 1,
+								id: index,
 								fullName: `${item.name.first} ${item.name.last}`
 							};
 						}),

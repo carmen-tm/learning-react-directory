@@ -20,7 +20,7 @@ const Card = props => {
 
 //It arrives an object with different keys, with everything strings
 Card.propTypes = {
-	id: PropTypes.string.isRequired,
+	id: PropTypes.number.isRequired,
 	fullName: PropTypes.string.isRequired,
 	img: PropTypes.string.isRequired,
 	city: PropTypes.string.isRequired,
