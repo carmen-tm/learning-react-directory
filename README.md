@@ -6,7 +6,7 @@ TODO
 - [x] Render li items from API
 - [x] Filters as controlled inputs (from State)
 - [x] Render li items filtered
-- [ ] Add detail pages
+- [x] Add detail pages
 - [ ] Review code and clean
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
